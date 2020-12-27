@@ -1,0 +1,117 @@
+<html>
+<head>
+<title>WebReisen</title>
+<link rel="shortcut icon" type="image/jpg" href="graphics/icon.jpg">
+<style>
+body{
+  background-image: url(graphics/wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; 
+  text-align: center;
+}
+
+#bar{
+text-align: left;
+background-color: transparent;
+bottom: 0px;
+width: 100%;
+height: 10%;
+margin-bottom: 10px;
+}
+
+.hidden{
+  display: none;
+}
+
+input{
+  display: block;
+}
+
+/*Menu*/
+#menu{
+  width: 100%;
+  height: 90%;
+background-color: white;
+float: right;
+}
+#startbutton{
+text-align: center;
+background-color: transparent;
+}
+
+.programanomenu{
+width:100px;
+height:100px;
+}
+
+.clock {
+  font-size: 20em;
+  color: white;
+  font: 40pt Times New Roman;
+  float: right;
+}
+
+#widgetspace{
+float:right;
+height:100%;
+width:10%;
+}
+
+.listabot{
+width:150px;
+height:150px;
+}
+
+/*EASTER EGGS*/
+.stickynote{
+background-color:yellow;
+width:200px;
+text-align: left;
+}
+</style>
+<script>
+//clock
+function clock() {
+var time = new Date(),
+    
+    
+    hours = time.getHours(),
+    
+   
+    minutes = time.getMinutes(),
+    
+    
+    seconds = time.getSeconds();
+
+document.querySelectorAll('.clock')[0].innerHTML = harold(hours) + ":" + harold(minutes) + ":" + harold(seconds);
+  
+  function harold(standIn) {
+    if (standIn < 10) {
+      standIn = '0' + standIn
+    }
+    return standIn;
+  }
+}
+setInterval(clock, 1000);
+</script>
+</head>
+<body>
+<!-MENU-->
+<!-MENU-->
+<div id = bar>
+<!-start->
+<a href = "appmenu.html">
+  <button id = "startbutton">
+<img src="graphics/startbutton.jpg" width="70" height="70">
+  </button>
+</a>
+  <div class = clock>
+  </div>
+</div>
+<!--The desktop start here--->
+<!--Area for widgets-->
+<div id = widgetspace>
+</div>
+<!--/Area for widgets-->
+</body>
+</html>
